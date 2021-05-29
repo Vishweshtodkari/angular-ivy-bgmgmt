@@ -8,7 +8,11 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   num: number[] = [2, 3, 10, 15, 26, 35, 50, 63];
   ind_number: number;
-  onsubmit(submit1) {
-    let index = this.num.findIndex(fruit => fruit === 3);
+  index_val: number;
+
+  clickEvent(ind_number) {
+    this.index_val = this.num.findIndex(
+      fruit => fruit === this.num[ind_number]
+    );
   }
 }
