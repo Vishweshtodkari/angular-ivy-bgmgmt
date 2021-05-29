@@ -1,0 +1,11 @@
+<form #submit="ngForm" (ngSubmit)="onsubmit(submit)">
+  <p><small>Serise:-</small>2,3,10,15,26,35,50,63,?</p>
+  <div class="form-group">
+    <input type="text"
+  placeholder="enter index number" name="ind_number"
+  [(ngModel)]="ind_number">
+    <button type="submit">subnit</button>
+    <h1 *ngIf="submit">{{num[ind_number]}}</h1>
+    <p></p>
+  </div>
+</form>
